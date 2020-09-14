@@ -15,7 +15,7 @@
   },
   "scripts": {
     "server": "nodemon index.js",
-    "start": "node index.js",
+    "start": "node -r dotenv/config --experimental-modules index.js",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "nodemonConfig": {
@@ -24,6 +24,7 @@
     ]
   },
   "engines": {
-    "node": "12.9.1"
+    "node": "12.9.1",
+    "npm": "6.10.2"
   }
 }
